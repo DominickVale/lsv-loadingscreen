@@ -1,24 +1,6 @@
-# Simple JS/HTML/SASS/Webpack starter
+# Simple loading screen for the Los Santos V FiveM Deathmatch server.
 
-A very simple starter kit i made to learn:
+Made with my webpack starter kit i made with:
 * Webpack
 * eslint
-* bootstrap
 
-### Installation
-
-```
-npm install
-```
-
-### Start development server
-
-```
-npm start
-```
-
-### Build production version
-
-```
-npm run build
-```
