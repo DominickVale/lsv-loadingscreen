@@ -1,7 +1,18 @@
 files {
   'index.html',
-  'index.css',
-  '1.jpg'
+  'main.css',
+  'main.js',
+  'img/logo.png',
+  'img/r1.png',
+  'img/r2.png',
+  'img/r3.png',
+  'img/r4.png',
+  'img/r5.png',
+  'img/r6.png',
+  'img/rulesTitle.png',
+  'img/heli.jpg',
+  'fonts/ChaletLondon.ttf',
+  'fonts/Pricedown.ttf',
 }
 
 loadscreen 'index.html'
