@@ -4,14 +4,19 @@
 const slideshowImages = document.querySelectorAll('.slideshow__item')
 
 
-let currentIndex = 0
-let lastIndex = 0
+// Starts with a random index 
+let currentIndex = Math.round(Math.floor(Math.random() * slideshowImages.length))
+let lastIndex = currentIndex - 1
+
 
 const config = {
-   slideshowInterval: 20000,
-   animationDuration: '30s',
+   slideshowInterval: 10000,
+   animationDuration: '20s',
 }
 
+/**
+ * Carousel / SlideShow
+ */
 const changeBackground = () => {
    lastIndex = currentIndex
    
@@ -20,9 +25,13 @@ const changeBackground = () => {
    
    let current = slideshowImages[currentIndex]
    let prev = slideshowImages[lastIndex]
+   let next = currentIndex < slideshowImages.length - 1 ? slideshowImages[currentIndex+1] : slideshowImages[0]
 
    let currentClasses = current.className.split(' ')
    let prevClasses = prev.className.split(' ')
+
+   // Reset next images animation so it starts over
+   next.style.animation = ''
 
    current.style.animation = `${currentClasses[1]} ${config.animationDuration} infinite linear alternate`
    currentClasses.push('shown')
@@ -32,8 +41,6 @@ const changeBackground = () => {
 
 
 export default () => {
-   console.log('Working')
-
    changeBackground()
 
    setInterval(() => {
