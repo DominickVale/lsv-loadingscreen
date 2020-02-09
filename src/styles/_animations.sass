@@ -8,3 +8,20 @@
     svg
       g
         opacity: 1;
+
+.carousel__container
+  img
+    transition: all 3s ease-in;
+    animation: cinematic-right $cinematic__duration infinite linear alternate;
+
+@keyframes cinematic-left
+  0%
+    transform: translateX(0) translateY(0)
+  100%
+    transform: translateX($cinematic__left--X) translateY($cinematic__left--Y);
+
+@keyframes cinematic-right
+  0%
+    transform: translateX(0) translateY(0)
+  100%
+    transform: translateX($cinematic__right--X) translateY($cinematic__right--Y);

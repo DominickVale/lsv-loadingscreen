@@ -18,18 +18,25 @@ header
   .logo
     z-index: 100;
 
-.background__image
+.hidden
+  height: 0;
+  width: 0;
+  opacity: 0;
+.carousel__container
+  overflow: hidden;
   position: absolute;
   top: $top__bar--height;
   left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
+  background-color: red;
   width: 100%;
   height: 73vh;
-  background-image: url("../../public/img/heli.jpg")
-  background-position: 50% 50%;
-  background-size: cover;
+  img
+    position: absolute;
+    top: -30vh;
+    height: auto;
+    width: 130%;
+    min-width: 1300px;
+
 .frame__bar
   z-index: 90;
   position: absolute;
