@@ -18,23 +18,23 @@ header
   .logo
     z-index: 100;
 
-.hidden
-  height: 0;
-  width: 0;
-  opacity: 0;
+.shown
+  opacity: 1 !important;
 .carousel__container
   overflow: hidden;
   position: absolute;
   top: $top__bar--height;
   left: 0;
-  background-color: red;
+  background-color: black;
   width: 100%;
   height: 73vh;
   img
+    opacity: 0;
     position: absolute;
     top: -30vh;
+    left: -15vw;
     height: auto;
-    width: 130%;
+    width: 140%;
     min-width: 1300px;
 
 .frame__bar
