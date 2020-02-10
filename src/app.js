@@ -1,9 +1,9 @@
-
+import config from './config'
 
 const muteButton = document.querySelector('.music__button')
 const slideshowImages = document.querySelectorAll('.slideshow__item')
 const tips = document.querySelector('.tips')
-
+const audio = document.querySelector('audio')
 
 // Starts with a random index 
 let currentIndex = Math.round(Math.floor(Math.random() * slideshowImages.length))
@@ -11,17 +11,6 @@ let lastIndex = currentIndex - 1
 let tipsCounter = 0
 
 let musicMuted = false
-
-const config = {
-   slideshowInterval: 10000,
-   animationDuration: '20s',
-   tips: [
-      'Lorem ipsum dolor sit amet, 1consectetur adipiscing lisis nullaarcu facilisis nulla laoreet. Interdum eu tincidun sed.',
-      'Lorem ipsum dolor sit amet, 2consectetur adipiscing lisis nullaarcu.',
-      'Lorem ipsum dolor sit amet, 3consectetur.',
-      'Lorem ipsum dolor sit ing lisis 4nullaarcu facilisis nulla laor, consectetur adipiscing lisis nullaarcu facilisis nulla laoreet. Interdum eu tincidun sed.',
-   ]
-}
 
 
 /**
@@ -80,6 +69,7 @@ const muteButtonHandler = evt => {
    `
 
    evt.currentTarget.innerHTML = musicMuted ? volumeIcon : mutedIcon
+   audio.muted = !audio.muted
    musicMuted = !musicMuted
 }
 
@@ -87,6 +77,7 @@ export default () => {
    changeBackground()
    changeTips()
 
+   audio.volume = config.audioVolume
    muteButton.addEventListener('click', muteButtonHandler)
    setInterval(() => {
       changeBackground()
@@ -98,6 +89,4 @@ export default () => {
  * todo:
  * finish progress bar
  * polish layout
- * add more customization
- * add sound
  */

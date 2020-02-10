@@ -18,6 +18,25 @@
   img
     transition: all 3s ease-in;
 
+.fade__in
+  z-index: -1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  animation: fade-in $fade-in--duration ease-in;
+
+@keyframes fade-in
+  0%
+    background-color: black;
+    z-index: 1000;
+  99%
+    z-index: 1000;
+  100%
+    background-color: rgba(0,0,0,0.0);
+
 @keyframes tips-in
   0%
     transform: translateX(-50vw);

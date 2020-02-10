@@ -9,12 +9,16 @@
 </head>
 
 <body>
+  <audio autoplay>
+    <source src="song.ogg" type="audio/ogg" />     
+  </audio>
   <header>
+    <div class="fade__in"></div>
     <img src="img/logo.png" alt="Logo" class="logo">
     <div class="frame__bar">
-      <button class="music__button" id="music-toggle">
+      <button class="music__button">
         <svg width="28" height="33" viewbox="0 0 28 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.2">
+          <g opacity="0.4">
             <path class="music-svg" d="M1 16.4481V11.0689H6.37924L14.4481 3V29.8962L6.37924 21.8273H1V16.4481Z" stroke="#E5EAFE" stroke-width="2" stroke-miterlimit="10"/>
             <path class="music-svg" d="M18.0352 20.9307C20.5105 20.9307 22.5179 18.9234 22.5179 16.448C22.5179 13.9727 20.5105 11.9653 18.0352 11.9653" stroke="#E5EAFE" stroke-width="2" stroke-miterlimit="10"/>
             <path class="music-svg" d="M18.0352 7.48291C22.9867 7.48291 27.0006 11.4967 27.0006 16.4483C27.0006 21.3999 22.9867 25.4137 18.0352 25.4137" stroke="#E5EAFE" stroke-width="2" stroke-miterlimit="10"/>
@@ -27,8 +31,7 @@
     <div class="carousel__container">
       <img src="img/heli.jpg" class="slideshow__item cinematic-left shown" alt="">
       <img src="img/asset.jpg" class="slideshow__item cinematic-right" alt="">
-      <img src="img/heli.jpg" class="slideshow__item cinematic-left" alt="">
-      <img src="img/asset.jpg" class="slideshow__item cinematic-right" alt="">
+      <img src="img/lazer.jpg" class="slideshow__item cinematic-right" alt="">
     </div>
     <section class="rules">
       <img src="img/rulesTitle.png" alt="" class="rules--title">
