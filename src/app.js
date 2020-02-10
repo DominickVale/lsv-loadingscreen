@@ -1,4 +1,5 @@
 import config from './config'
+import progressBar from './progressBar'
 
 const muteButton = document.querySelector('.music__button')
 const slideshowImages = document.querySelectorAll('.slideshow__item')
@@ -41,7 +42,7 @@ const changeBackground = () => {
 
 const changeTips = () => {
    tips.innerHTML = config.tips[tipsCounter]
-   
+
    if(tipsCounter < config.tips.length -1) tipsCounter++
       else tipsCounter = 0
 }
@@ -81,6 +82,7 @@ const setCursor = () => {
    })
 }
 export default () => {
+   progressBar()
    changeBackground()
    changeTips()
    setCursor()
