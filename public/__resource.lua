@@ -2,7 +2,9 @@ files {
   'index.html',
   'main.css',
   'main.js',
+  'song.ogg',
   'img/logo.png',
+  'img/cursor__main.png',
   'img/r1.png',
   'img/r2.png',
   'img/r3.png',
@@ -11,6 +13,8 @@ files {
   'img/r6.png',
   'img/rulesTitle.png',
   'img/heli.jpg',
+  'img/lazer.jpg',
+  'img/asset.jpg',
   'fonts/ChaletLondon.ttf',
   'fonts/Pricedown.ttf',
 }

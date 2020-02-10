@@ -1,4 +1,5 @@
 export default {
+  cursorOffset: 5, //px
   slideshowInterval: 10000,  //ms
   animationDuration: '20s', //human-readable
   audioVolume: 0.8,

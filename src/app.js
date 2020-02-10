@@ -6,8 +6,8 @@ const tips = document.querySelector('.tips')
 const audio = document.querySelector('audio')
 
 // Starts with a random index 
-let currentIndex = Math.round(Math.floor(Math.random() * slideshowImages.length))
-let lastIndex = currentIndex - 1
+let currentSlideIndex = Math.round(Math.floor(Math.random() * slideshowImages.length))
+let lastSlideIndex = currentSlideIndex - 1
 let tipsCounter = 0
 
 let musicMuted = false
@@ -17,14 +17,14 @@ let musicMuted = false
  * Carousel / SlideShow
  */
 const changeBackground = () => {
-   lastIndex = currentIndex
+   lastSlideIndex = currentSlideIndex
    
-   if(currentIndex < slideshowImages.length -1) currentIndex++
-   else currentIndex = 0
+   if(currentSlideIndex < slideshowImages.length -1) currentSlideIndex++
+   else currentSlideIndex = 0
    
-   let current = slideshowImages[currentIndex]
-   let prev = slideshowImages[lastIndex]
-   let next = currentIndex < slideshowImages.length - 1 ? slideshowImages[currentIndex+1] : slideshowImages[0]
+   let current = slideshowImages[currentSlideIndex]
+   let prev = slideshowImages[lastSlideIndex]
+   let next = currentSlideIndex < slideshowImages.length - 1 ? slideshowImages[currentSlideIndex+1] : slideshowImages[0]
 
    let currentClasses = current.className.split(' ')
    let prevClasses = prev.className.split(' ')
@@ -73,9 +73,17 @@ const muteButtonHandler = evt => {
    musicMuted = !musicMuted
 }
 
+const setCursor = () => {
+   document.body.addEventListener('mousemove', evt => {
+   let cursor = document.querySelector('.cursor__main')
+   const cursorOffset = config.cursorOffset
+   cursor.style.transform = `translate(${evt.clientX-cursorOffset}px, ${evt.clientY-cursorOffset}px)`
+   })
+}
 export default () => {
    changeBackground()
    changeTips()
+   setCursor()
 
    audio.volume = config.audioVolume
    muteButton.addEventListener('click', muteButtonHandler)
