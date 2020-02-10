@@ -8,7 +8,7 @@ html
   box-sizing: inherit;
 
 body
-  font-family: "ChaletLondon";
+  font-family: $font--family;
   font-size: $font--size;
 
 header
@@ -17,6 +17,8 @@ header
   align-items: center;
   .logo
     z-index: 100;
+    position: relative;
+    top: $logo--y__offset;
 
 .shown
   opacity: 1 !important;
@@ -56,9 +58,10 @@ header
   display: flex;
   min-height: 18.8rem;
   position: absolute;
-  right: 0;
+  right: $rules--x__position;
   top: $rules--y__position;
   padding: 2rem 3rem 1rem 2rem;
+  max-width: $rules--max-width;
   background-color: $rules--bg-color;
   .rules--title
     position: absolute;
