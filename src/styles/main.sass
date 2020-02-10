@@ -4,6 +4,7 @@
 
 html
   box-sizing: border-box;
+  overflow-x: hidden !important;
 *, *:before, *:after
   box-sizing: inherit;
 
@@ -16,6 +17,7 @@ header
   justify-content: center;
   align-items: center;
   .logo
+    pointer-events: none;
     z-index: 100;
     position: relative;
     top: $logo--y__offset;
@@ -31,6 +33,7 @@ header
 .shown
   opacity: 1 !important;
 .carousel__container
+  pointer-events: none;
   overflow: hidden;
   position: absolute;
   top: $top__bar--height;
@@ -48,6 +51,7 @@ header
     min-width: 1300px;
 
 .frame__bar
+  pointer-events: none;
   z-index: 90;
   position: absolute;
   top: 0;
@@ -58,11 +62,13 @@ header
   display: flex;
   justify-content: flex-end;
 .music__button
+  pointer-events: all;
   margin-right: $music__button--right__offset;
   background: none;
   border: none;
   width: 6rem;
 .rules
+  pointer-events: none;
   display: flex;
   min-height: 18.8rem;
   position: absolute;
@@ -113,6 +119,7 @@ header
           max-width: 22rem;
 
 .frame--bottom
+  pointer-events: none;
   top: auto;
   bottom: 0;
   height: $bottom__bar--height;
