@@ -45,24 +45,24 @@
 
 @keyframes cinematic-left
   0%
-    transform: translateX(0) translateY(0) scale(0.9);
+    transform: translateX($cinematic__left--X-start) translateY($cinematic__left--Y-start) scale(1.1);
   100%
-    transform: translateX($cinematic__left--X) translateY($cinematic__left--Y) scale(1.1);
+    transform: translateX($cinematic__left--X-end) translateY($cinematic__left--Y-end) scale($cinematic__left--scale-to);
 
 @keyframes cinematic-right
   0%
-    transform: translateX(0) translateY(0) scale(0.9)
+    transform: translateX($cinematic__right--X-start) translateY($cinematic__right--Y-start) scale(1.1)
   100%
-    transform: translateX($cinematic__right--X) translateY($cinematic__right--Y) scale(1.1);
+    transform: translateX($cinematic__right--X-end) translateY($cinematic__right--Y-end) scale($cinematic__right--scale-to);
 
 @keyframes cinematic-up
   0%
-    transform: translateX(0) translateY(0) scale(0.9)
+    transform: translateX($cinematic__up--X-start) translateY($cinematic__up--Y-start) scale(1.1)
   100%
-    transform: translateX($cinematic__up--X) translateY($cinematic__up--Y) scale(1.1);
+    transform: translateX($cinematic__up--X-end) translateY($cinematic__up--Y-end) scale($cinematic__up--scale-to);
 
 @keyframes cinematic-down
   0%
-    transform: translateX(0) translateY(0) scale(0.9)
+    transform: translateX($cinematic__down--X-start) translateY($cinematic__down--Y-start) scale(1.1)
   100%
-    transform: translateX($cinematic__down--X) translateY($cinematic__down--Y) scale(1.1);
+    transform: translateX($cinematic__down--X-end) translateY($cinematic__down--Y-end) scale($cinematic__down--scale-to);
