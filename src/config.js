@@ -1,7 +1,7 @@
 export default {
   cursorOffset: 5, //px
-  slideshowInterval: 10000,  //ms
-  animationDuration: '20s', //human-readable
+  slideshowInterval: 20000,  //ms
+  animationDuration: '28s', //human-readable
   audioVolume: 0.8,
   tips: [
      'Lorem ipsum dolor sit amet, 1consectetur adipiscing lisis nullaarcu facilisis nulla laoreet. Interdum eu tincidun sed.',
