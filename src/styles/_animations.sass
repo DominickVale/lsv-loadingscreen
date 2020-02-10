@@ -1,26 +1,49 @@
 .music__button
   cursor: pointer;
   svg g
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
   &:focus
     outline: none;
   &:hover
     svg
+      transform: scale(1.1)
       g
-        opacity: 1;
+        opacity: 0.6;
+
+.tips
+  animation: tips-in 3s ease;
+  transition: all 1s ease;
 
 .carousel__container
   img
     transition: all 3s ease-in;
 
+@keyframes tips-in
+  0%
+    transform: translateX(-50vw);
+  100%
+    transform: translateX(0);
+
 @keyframes cinematic-left
   0%
-    transform: translateX(0) translateY(0)
+    transform: translateX(0) translateY(0) scale(0.9);
   100%
-    transform: translateX($cinematic__left--X) translateY($cinematic__left--Y);
+    transform: translateX($cinematic__left--X) translateY($cinematic__left--Y) scale(1.1);
 
 @keyframes cinematic-right
   0%
-    transform: translateX(0) translateY(0)
+    transform: translateX(0) translateY(0) scale(0.9)
   100%
-    transform: translateX($cinematic__right--X) translateY($cinematic__right--Y);
+    transform: translateX($cinematic__right--X) translateY($cinematic__right--Y) scale(1.1);
+
+@keyframes cinematic-up
+  0%
+    transform: translateX(0) translateY(0) scale(0.9)
+  100%
+    transform: translateX($cinematic__up--X) translateY($cinematic__up--Y) scale(1.1);
+
+@keyframes cinematic-down
+  0%
+    transform: translateX(0) translateY(0) scale(0.9)
+  100%
+    transform: translateX($cinematic__down--X) translateY($cinematic__down--Y) scale(1.1);
